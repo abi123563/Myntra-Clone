@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
+}
+nav{
+    height: 80px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    padding:35px;
+    box-shadow: 0 4px 8px grey;   
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    border-bottom: 2px solid black;
+}
+ input{
+
+    width: 400px;
+    padding: 10px;
+    background-color: lightgray;
+    border: none;
+
+}
+nav img{
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.icon-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVE  */
+
+@media screen and (max-width: 768px) {
+  nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+  /* Profile Wishlist Bag  */
+  .icons, .icon-box, .profile-link {
+    display: none !important;
+  }
+  input {
+    width: 100%;
+    display: block !important;
+    margin-top: 10px;
+    order: 10;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 15px;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  nav a {
+    font-size: 13px;
+  }
+}
+
+/* - 1100px to 769px */
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  nav {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  nav a {
+    font-size: 12px;
+    margin: 0 4px;
+  }
+  input {
+    width: 180px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  .icons {
+    gap: 10px;
+  }
+  .icon-box p {
+    font-size: 10px;
+  }
+}
+
+
+/* ===============================
+   Myntra FWD Carousel - CSS
+   =============================== */
+
+
+
+/* ========= FWD CAROUSEL  ========= */
+#fwdCarousel {
+  width: 100% !important;
+  height: 420px !important;
+  margin-top: 30px !important;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+
+#fwdCarousel .carousel-inner,
+#fwdCarousel .carousel-item {
+  width: 100% !important;
+  height: 420px !important;
+}
+
+#fwdCarousel .carousel-item img {
+  width: 100% !important;
+  height: 450px !important;
+  object-fit: cover !important; /* full fill pannum, crop agathu maari */
+  object-position: center top !important;
+  display: block;
+}
+
+/* Dots */
+.carousel-indicators {
+  bottom: 10px !important;
+  margin-bottom: 0;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  border: 0;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* Arrows hide - Myntra 
+/* ===== Arrows ===== */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+#fwdCarousel:hover .carousel-control-prev,
+#fwdCarousel:hover .carousel-control-next {
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 42px;
+  height: 42px;
+  background-color: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  background-size: 55%;
+}
+
+/* ===============================
+   RESPONSIVE 
+   =============================== */
+
+/* ----- Laptop (1024px - 1366px) ----- */
+@media (max-width: 1366px) {
+  #fwdCarousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 460px;
+  }
+}
+
+/* ----- Tablet Landscape (768px - 1024px) ----- */
+@media (max-width: 1024px) {
+  #fwdCarousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 380px;
+  }
+}
+
+/* ----- Tablet Portrait (600px - 768px) ----- */
+@media (max-width: 768px) {
+  #fwdCarousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 300px;
+  }
+  
+  .carousel-indicators {
+    bottom: 8px;
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+  }
+  
+  .carousel-indicators .active {
+    width: 20px;
+  }
+}
+
+/* ----- Mobile Large (425px - 600px) ----- */
+@media (max-width: 600px) {
+  #fwdCarousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 210px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+/* ----- Mobile Medium (375px) ----- */
+@media (max-width: 480px) {
+  #fwdCarousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 180px;
+  }
+}
+
+/* ----- Mobile Small (320px) ----- */
+@media (max-width: 375px) {
+  #fwdCarousel,
+  .carousel-item,
+  .carousel-item img {
+    height: 160px;
+  }
+}
+
+/* ----- Extra Smooth Animation ----- */
+.carousel-item {
+  transition: transform 0.7s ease-in-out !important;
+}
+
+/* Hide Bootstrap default shadow */
+.carousel-control-prev:focus,
+.carousel-control-next:focus {
+  outline: none;
+  box-shadow: none;
+}
+.fwd{
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;   
+}
+.fwd img{
+    height: 200px;
+    width: 90%;
+    margin:auto;
+    display: block;
+    
+}
+
+.deal {
+  width: 90%;
+  gap: 20px; 
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  margin: auto;
+ 
+}
+
+.box {
+  width: 230px;
+  border: 3px solid #00bcd4;
+  display: flex;
+  flex-direction: column; 
+  background: white;
+}
+
+.images {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  order: 1;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.images h4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: black;
+  text-align: center;
+  padding: 8px 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+.box p {
+  width: 100%;
+  background: #00bcd4;
+  color: black;
+  text-align: center;
+  padding: 8px 0;
+  margin: 0;
+  font-size: 12px;
+  order: 2; 
+  display: block;
+}
+
+/* BIGGEST DEALS ON TOP DRIPS RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .deal {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .deal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 95%;
+  }
+  .box {
+    width: 100%;
+  }
+  .images {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .deal {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .box {
+    width: 100%;
+    border-width: 2px;
+  }
+  .images {
+    height: 160px;
+  }
+}
+
+
+footer{
+    background-color: lightgray;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+/*footer .content3{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}*/
+footer p{
+    font-size: 15px;
+    margin:0;
+    margin-left: 30px;
+}
+footer h4{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.content3 .play{
+    color: white;
+    background-color: black;
+    border-radius:5px;
+}
+.content3 .app{
+    color: white;
+    background-color: black;
+    border-radius:5px;
+}
+.content5{
+    background-color:lightgray;
+}
+.content5 h4{
+    font-size: 15px;
+    margin-left: 30px;
+}
+.content5 p{
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+

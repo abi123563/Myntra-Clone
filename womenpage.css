@@ -1,0 +1,841 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: white;
+}
+nav{
+    height: 80px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 100%;
+    padding:35px;
+    box-shadow: 0 4px 8px grey;   
+}
+nav a{
+    color: black;
+    text-decoration: none;
+}
+nav a:hover{
+    border-bottom: 2px solid black;
+}
+ input{
+
+    width: 400px;
+    padding: 10px;
+    background-color: lightgray;
+    border: none;
+
+}
+nav img{
+    height: 60px;
+    width: 60px;
+    background-size: cover;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+.icon-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* RESPONSIVE  */
+
+@media screen and (max-width: 768px) {
+  nav {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px 15px;
+  }
+  /* Profile Wishlist Bag hide pannidum */
+  .icons, .icon-box, .profile-link {
+    display: none !important;
+  }
+  input {
+    width: 100%;
+    display: block !important;
+    margin-top: 10px;
+    order: 10;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    gap: 15px;
+  }
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+  nav a {
+    font-size: 13px;
+  }
+}
+
+/* - 1100px to 769px */
+@media screen and (max-width: 1100px) and (min-width: 769px) {
+  nav {
+    padding: 10px 15px;
+    gap: 10px;
+  }
+  nav a {
+    font-size: 12px;
+    margin: 0 4px;
+  }
+  input {
+    width: 180px;
+    padding: 8px;
+    font-size: 12px;
+  }
+  .icons {
+    gap: 10px;
+  }
+  .icon-box p {
+    font-size: 10px;
+  }
+}
+
+
+
+.offer{
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;   
+}
+.offer img{
+    height: 200px;
+    width: 90%;
+    margin:auto;
+    display: block;
+    
+}
+/* ===== DISCOUNT BANNER ===== */
+.discount-wrapper {
+  background-color: #ffffff;
+  padding: 15px 40px; /* top-bottom left-right white space */
+  text-align: center;
+}
+
+.discount-img {
+  width: 90%;
+  max-width: 1400px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* ===== CAROUSEL STYLING ===== */
+#offerCarousel {
+  margin-top: 10px;
+}
+
+.carousel-inner img {
+  height: 450px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.carousel-caption {
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+  padding: 15px 25px;
+  bottom: 30px;
+}
+
+.carousel-caption h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.carousel-caption p {
+  font-size: 18px;
+  color: #ffd;
+}
+
+/* Indicators */
+.carousel-indicators button {
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+}
+
+/* ===== RESPONSIVE CSS ===== */
+
+/* Tablet - 768px */
+@media (max-width: 768px) {
+  .discount-wrapper {
+    padding: 10px 20px;
+  }
+  .discount-img {
+    width: 95%;
+  }
+  .carousel-inner img {
+    height: 300px;
+  }
+  .carousel-caption h2 {
+    font-size: 22px;
+  }
+  .carousel-caption p {
+    font-size: 14px;
+  }
+}
+
+/* Mobile - 576px */
+@media (max-width: 576px) {
+  .discount-wrapper {
+    padding: 8px 10px;
+  }
+  .discount-img {
+    width: 100%;
+  }
+  .carousel-inner img {
+    height: 200px;
+    border-radius: 0;
+  }
+  .carousel-caption {
+    bottom: 15px;
+    padding: 8px 12px;
+  }
+  .carousel-caption h2 {
+    font-size: 16px;
+  }
+  .carousel-caption p {
+    font-size: 12px;
+    margin: 0;
+  }
+  .carousel-indicators {
+    margin-bottom: 5px;
+  }
+}
+
+/* Extra small - 375px */
+@media (max-width: 375px) {
+  .carousel-inner img {
+    height: 160px;
+  }
+}
+
+
+
+
+
+.discount{
+    height: auto;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0;   
+}
+.discount img{
+    height: 200px;
+    width: 90%;
+    margin:auto;
+    display: block;
+    
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Ella card kum ore style */
+.card1, .card2, .card3, .card4, .card5{
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden; /* ithu mukkiyam */
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.card1 img, .card2 img, .card3 img, .card4 img, .card5 img{
+    width: 90%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    padding: 0; 
+    border-radius:10px;
+    margin-top: 15px;
+    margin-left: 15px;
+    box-shadow: none;
+}
+.card1, .card2, .card3, .card4, .card5{
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card1 p, .card2 p, .card3 p, .card4 p, .card5 p{
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.card1 h5, .card2 h5, .card3 h5, .card4 h5, .card5 h5{
+    color: #ff3f6c;
+    margin-top: 5px;
+}
+@media (max-width: 1024px) {
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 10px; padding: 10px; }
+  .cards img { height: 190px; }
+}
+
+@media (max-width: 480px) {
+  .cards { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .cards img { height: 160px ; }
+}
+
+.category{
+     width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 30px;
+}
+.box{
+    background-color: #f5f5f5;
+}
+.box img{
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   margin-left: 20px;
+   margin-top: 20px;
+}
+.box p{
+    text-align: center;
+}
+
+/* CATEGORIES TO BAG RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .category {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .box img {
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .category {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .box img {
+    width: 100px;
+    height: 100px;
+    margin: 10px auto 0 auto;
+    display: block;
+  }
+  .box p {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .category {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .box {
+    background-color: transparent;
+  }
+  .box img {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    display: block;
+  }
+  .box p {
+    font-size: 11px;
+  }
+}
+
+
+.explore{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 20px;
+}
+.box1{
+    background-color: #f5f5f5;
+}
+.box1 img{
+   height: 220px;
+   width: 200px;
+   border-radius: 10px;
+   box-shadow: 0 3px 10px lightgray;
+   margin-left: 20px;
+   margin-top: 20px;
+}
+.box1 p{
+    text-align: center;
+}
+
+/* EXPLORE TOP BRANDS RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .explore {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box1 img {
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .explore {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .box1 img {
+    width: 100%;
+    height: 160px;
+    margin: 0;
+  }
+  .box1 p {
+    font-size: 13px;
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .explore {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 95%;
+  }
+  .box1 {
+    background-color: transparent;
+  }
+  .box1 img {
+    width: 100%;
+    height: 140px;
+    margin: 0;
+  }
+}
+
+
+/*.logo img{
+    border: none;
+    box-shadow: none;
+    border-radius:0;
+    height: 70px;
+    width: 180px;
+    background-color: transparent;
+}*/
+.luxe{
+     width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 15px;
+}
+.box2 img{
+    height: 300px;
+    width: 200px;
+    border: 4px solid black;
+}
+
+/* MYNTRA LUXE RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .luxe {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box2 img {
+    width: 100%;
+    height: 280px;
+    border-width: 3px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .luxe {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  .box2 img {
+    width: 100%;
+    height: 200px;
+    border-width: 2px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .luxe {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .box2 img {
+    width: 100%;
+    height: 220px;
+    border-width: 2px;
+  }
+}
+
+
+.indian{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+}
+.box3 img{
+    height: 200px;
+    width: 240px;
+}
+.box3 h5{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.box3 p{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+/* TRENDING IN INDIAN WEAR RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .indian {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box3 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .indian {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .box3 img {
+    width: 100%;
+    height: 200px;
+  }
+  .box3 h5 {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .box3 p {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .indian {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 95%;
+  }
+  .box3 img {
+    width: 100%;
+    height: 160px;
+  }
+  .box3 h5 {
+    font-size: 13px;
+  }
+  .box3 p {
+    font-size: 11px;
+  }
+}
+
+.sports{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+}
+.box4 img{
+    height: 200px;
+    width: 240px;
+}
+.box4 h5{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.box4 p{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+/* TRENDING IN SPORTS WEAR RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .sports {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box4 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sports {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .box4 img {
+    width: 100%;
+    height: 200px;
+  }
+  .box4 h5 {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .box4 p {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sports {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 95%;
+  }
+  .box4 img {
+    width: 100%;
+    height: 160px;
+  }
+  .box4 h5 {
+    font-size: 13px;
+  }
+  .box4 p {
+    font-size: 11px;
+  }
+}
+
+.footwear{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+}
+.box5 img{
+    height: 200px;
+    width: 240px;
+}
+.box5 h5{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.box5 p{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+
+/* TRENDING IN FOOTWEAR RESPONSIVE  */
+
+@media screen and (max-width: 1100px) {
+  .footwear {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box5 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footwear {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .box5 img {
+    width: 100%;
+    height: 200px;
+  }
+  .box5 h5 {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .box5 p {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footwear {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 95%;
+  }
+  .box5 img {
+    width: 100%;
+    height: 160px;
+  }
+  .box5 h5 {
+    font-size: 13px;
+  }
+  .box5 p {
+    font-size: 11px;
+  }
+}
+
+
+.accessary{
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 20px;
+}
+.box6 img{
+    height: 200px;
+    width: 240px;
+}
+.box6 h5{
+    font-size: 18px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.box6 p{
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+/* TRENDING IN ACCESSORIES RESPONSIVE ONLY */
+
+@media screen and (max-width: 1100px) {
+  .accessary {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .box6 img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .accessary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .box6 img {
+    width: 100%;
+    height: 200px;
+  }
+  .box6 h5 {
+    font-size: 15px;
+    margin-left: 5px;
+  }
+  .box6 p {
+    font-size: 12px;
+    margin-left: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .accessary {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 95%;
+  }
+  .box6 img {
+    width: 100%;
+    height: 160px;
+  }
+  .box6 h5 {
+    font-size: 13px;
+  }
+  .box6 p {
+    font-size: 11px;
+  }
+}
+
+
+footer{
+    background-color: lightgray;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+}
+/*footer .content3{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}*/
+footer p{
+    font-size: 15px;
+    margin:0;
+    margin-left: 30px;
+}
+footer h4{
+    font-size: 15px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.content3 .play{
+    color: white;
+    background-color: black;
+    border-radius:5px;
+}
+.content3 .app{
+    color: white;
+    background-color: black;
+    border-radius:5px;
+}
+.content5{
+    background-color:lightgray;
+}
+.content5 h4{
+    font-size: 15px;
+    margin-left: 30px;
+}
+.content5 p{
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+h4{
+    margin-left: 20px;
+}
